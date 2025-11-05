@@ -11,5 +11,8 @@ import com.pm.patient_service.model.Patient;
 @Repository
 public interface PatientRepository extends JpaRepository<Patient, UUID> {
 
+    //Is the Email already in db?
+    public boolean existsByEmail(String email);
+
     
 }
